@@ -17,6 +17,9 @@ public class SeedworkAbilities : ModuleRules
         [
             "CoreUObject",
             "Engine",
+            "GameplayTags",
+            "GameplayTasks",
+            "GameplayAbilities",
         ]);
     }
 }
