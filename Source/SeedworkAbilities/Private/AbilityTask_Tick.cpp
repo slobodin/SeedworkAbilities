@@ -18,5 +18,8 @@ void UAbilityTask_Tick::TickTask(float deltaTime)
 {
     Super::TickTask(deltaTime);
 
-    OnTick.Broadcast(deltaTime);
+    if (ShouldBroadcastAbilityTaskDelegates())
+    {
+        OnTick.Broadcast(deltaTime);
+    }
 }

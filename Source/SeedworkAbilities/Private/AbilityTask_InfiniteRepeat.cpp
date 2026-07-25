@@ -14,6 +14,8 @@ void UAbilityTask_InfiniteRepeat::Activate()
 
 UAbilityTask_InfiniteRepeat* UAbilityTask_InfiniteRepeat::InfiniteRepeatAction(UGameplayAbility* OwningAbility, float timeBetweenActions)
 {
+    check(timeBetweenActions > 0.f);
+
     auto myObj = NewAbilityTask<UAbilityTask_InfiniteRepeat>(OwningAbility);
 
     myObj->TimeBetweenActions = timeBetweenActions;
